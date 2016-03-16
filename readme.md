@@ -43,7 +43,7 @@ We need to figure out a way for Rails remember I'm signed in.
 
 #### Why not create an "is_signed_in" column in my User table?
 
-- How would Rails now how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
+- How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
 
 ### [You Do: Adding Sessions](adding-sessions.md) (30 / 80)
 
@@ -59,7 +59,7 @@ We need to figure out a way for Rails remember I'm signed in.
 
 `puts`ing out error messages isn't very helpful, since the user is never going to be able to see them.
 
-Rails gives us a handy method for showing users error messages, called `flash`. It relies on sessions.
+Rails gives us a handy method for showing error messages to users, called `flash`. It relies on sessions.
 
 ### [You Do: Adding Flash](adding-flash.md) (10 / 110)
 
@@ -86,7 +86,7 @@ Rails gives us a handy method for showing users error messages, called `flash`. 
 
 This version of Tunr breaks the fundamental rule of web security: Don't store passwords as plain text, even in a database. They should always be encrypted.
 
-That said, security is *complicated*, and you shouldn't let it prevent you from making an app (hence why we're not worrying about it here). When you get into a professional development environment, you'll likely have one teammate whose entire job is account security so no-one else needs to worry about it.
+That said, security is *complicated*, and you shouldn't let it prevent you from making an app (hence why we're not worrying about it here).
 
 ## Easy wins we didn't cover
 

@@ -22,7 +22,7 @@ You can set the **expiration date** of a cookie -- that is, when the browser "fo
 
 By default, a cookie expires when the user closes their browser, but you can make it expire after any length of time. This is the reason your banking website might say, "Your session expired after 30 minutes of inactivity."
 
-We're not going to cover how to do set expiration dates in this class, but the format looks like this:
+We're not going to cover how to set expiration dates in this class, but the format looks like this:
 
 ```rb
 cookies[:username] = {value: @user.username, expires: 1.hour.from_now}

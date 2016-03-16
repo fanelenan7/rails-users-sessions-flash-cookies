@@ -39,7 +39,7 @@ This `@instance_variable` behaves like any other instance variable in a controll
 
 As mentioned before, `@current_user` can be accessed in your views just like any other instance variable in a controller.
 
-Because `@current_user` declared in the `before_action` in the `ApplicationController`, we can access it in literally every view.
+Because `@current_user` is declared in the `before_action` in the `ApplicationController`, we can access it in literally every view.
 
 This means we can change the way things look depending on whether the user is signed in. For instance: we only want to direct them to "Sign Up" or "Sign In" if they aren't currently signed in.
 
@@ -73,7 +73,7 @@ I know I'm going to want to check this before lots of controller actions, so sav
 
 **Note: This is NOT a `before_action`.** I'd use that if I wanted to run this in every single route. But I want to run this only in specific routes: ones that involve writing new data. I have no problem with not-signed-in users *seeing* Artist and Song info as long as they can't *change* it.
 
-Now, I'dd add one line to the beginning of each `new`, `create`, `edit`, `update`, and `delete` controller action in the Artists and Songs controllers:
+Now, I'd add one line to the beginning of each `new`, `create`, `edit`, `update`, and `delete` controller action in the Artists and Songs controllers:
 
 ### [return unless authorized](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/633497f11da5d8a204a33f4e1b91cb72cd3de2fa#diff-5890a028f3f16dc4a2fe5a61c1fcdd89R9)
 
@@ -83,7 +83,7 @@ This means if the user isn't authorized, the controller action will stop (in thi
 
 The previous `authorized` method just checks whether a user is logged in. To prevent a user from updating another user's profile I need to also check whether the user is editing their own profile.
 
-This means I need a new `authorized` method. This one is a special case for users only, so instead of putting it in the Application Controller I'll put it in the Users Controller. It'll overwrite the Application Controller's `authorized` method, but only in the Users Controller.
+This means I need a new `authorized` method. This one is a special case for users only, so instead of putting it in the Application Controller I'll put it in the Users Controller. It'll **override** the Application Controller's `authorized` method, but *only in the Users Controller*.
 
 ### [def authorized](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/633497f11da5d8a204a33f4e1b91cb72cd3de2fa#diff-4e05ad0d64e6100656b63ad1e78f32c5R38)
 
