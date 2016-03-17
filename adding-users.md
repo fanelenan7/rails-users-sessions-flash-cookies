@@ -24,7 +24,7 @@ $ rake db:migrate
 
 ## 3. [Create the User model](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/c038ec882f7974f5fb1e5776e603c65494876593#diff-4676c008b11a5480d73d4a6de01e45b9R1)
 
-We could add in fancy validations to make sure passwords are at least 8 characters or what-have-you, but that's a "nice-to-have" we can come back to later.
+We're just going to give users a standard `username` and `password` field. We *could* add in fancy validations to make sure passwords are at least 8 characters or what-have-you, but that's a "nice-to-have" we can come back to later.
 
 ## 3.5 Update the [Artist](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/c038ec882f7974f5fb1e5776e603c65494876593#diff-8e4d37cdfca18efc71e0dbc0609a4e4fR4) and [Song](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/c038ec882f7974f5fb1e5776e603c65494876593#diff-90f827681ccbedf6cbfabf956112dc89R5) models to belong to Users
 
