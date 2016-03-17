@@ -135,3 +135,14 @@ That said, security is *complicated*, and you shouldn't let it prevent you from 
 - What else?
 
 These things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/43ccf55d3a7b7b7f1139eab791201e737348c38d)
+
+## References
+
+- Screencasts
+  - WDI 8, Robin
+    - [Part 1](https://youtu.be/3YK3qDwnkQ8)
+    - [Part 2](https://youtu.be/w51DnoJUsLA)
+    - [Part 3](https://youtu.be/YYEtEsFE9Mw)
+    - [Part 4](https://youtu.be/N67YBiLkrSE)
+    - [Part 5](https://youtu.be/3h34Guspvp8)
+
