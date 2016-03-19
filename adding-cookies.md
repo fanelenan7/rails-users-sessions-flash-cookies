@@ -8,9 +8,9 @@ We're going to add this to Tunr -- only we're going to remember users' usernames
 
 In Rails, `cookies` is a hash available in every controller action, like `session`.
 
-## [1. Make your sessions controller save the username to a cookie](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/39b0773f8718302a031df3bb6912e4544fd37db0#diff-d5241d488259f32ecbe2f636133e5ddaR5)
+## [1. Make your sessions controller save the username to a cookie](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/5/files#diff-d5241d488259f32ecbe2f636133e5ddaR15)
 
-## [2. Make that username show up when a user goes to signs in](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/39b0773f8718302a031df3bb6912e4544fd37db0#diff-d5241d488259f32ecbe2f636133e5ddaR14)
+## [2. Make that username show up when a user goes to signs in](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/5/files#diff-d5241d488259f32ecbe2f636133e5ddaR5)
 
 ## 3. Sign in, and then look for your cookie in Chrome!
 

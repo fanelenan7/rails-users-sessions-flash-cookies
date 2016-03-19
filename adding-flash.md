@@ -8,11 +8,11 @@ By convention, there are two types of flash messages: alerts and notices. Alerts
 
 Check for `puts` statements in the Application, Sessions, and Users controllers. For instance:
 
-### [session#create](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/7f802d05349430efa07db63cc06c9be5e3913ce3#diff-d5241d488259f32ecbe2f636133e5ddaR8)
+### [session#create](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/4/files#diff-d5241d488259f32ecbe2f636133e5ddaR12)
 
 Whether you make a particular message an `alert` or `notice` is up to you. But remember convention: alerts are used for warnings and errors, and notices are used for everything else.
 
-## [2. Show the messages in your user interface](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/7f802d05349430efa07db63cc06c9be5e3913ce3#diff-9599427925097c3c66f26ac1e0de5cadR23)
+## [2. Show the messages in your user interface](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/4/files#diff-9599427925097c3c66f26ac1e0de5cadR23)
 
 We can't actually see the flashes yet because we haven't put them anywhere in our `.html.erb` files yet.
 
@@ -24,7 +24,7 @@ The reason we're writing `|type, message|` -- including both the key and value o
 
 Try making flash messages show up.
 
-## [3. Differentiate between alerts and notices](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/7f802d05349430efa07db63cc06c9be5e3913ce3#diff-fb7484bc2f56c263954da6fc44982eeaR96)
+## [3. Differentiate between alerts and notices](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/4/files#diff-fb7484bc2f56c263954da6fc44982eeaR96)
 
 We wrote `|type, message|` instead of just `|message|` because it gives us a handy way of styling alerts and notices differently from each other. We can use each `type` as an HTML class. We'll make Alerts red, and Notices blue.
 

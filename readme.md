@@ -54,23 +54,15 @@ $(".inline-comments").hide()
 
 As you go, keep in mind the "Reflect" questions below which we'll address as a class.
 
-### [You Do: Adding Users](adding-users.md) (30 / 30)
+### [You Do: Adding Users](adding-users.md)
 
-### Reflect (10 / 40)
+### Reflect
 
-- What's the difference between `resources` and `resource`?
-- True or false: Every controller has to have a model, and vice-versa.
-- What's the difference between the Sessions controller and the Users controller?
 - How does `f.password_field` protect you from malware and hackers?
 - How could this be DRY-ed up? (Hint: There are 3 views that are almost identical.)
-
-### Shortcomings of this User system
-
-- How are you told if you entered the wrong password?
 - How are users' passwords protected?
-- What's different between being signed in and not being signed in?
 
-## Break (10 / 50)
+## Break
 
 ## Sessions
 
@@ -80,15 +72,27 @@ We need to figure out a way for Rails remember I'm signed in.
 
 - How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
 
-### [You Do: Adding Sessions](adding-sessions.md) (30 / 80)
+### [You Do: Adding Sessions](adding-sessions.md)
 
-### Reflect (10 / 90)
+### Reflect
 
+- What's the difference between `resources` and `resource`?
+- True or false: Every controller has to have a model, and vice-versa.
+- What's the difference between the Sessions controller and the Users controller?
 - What's the benefit of putting a method in the Application Controller?
 - What's is a `before_action`?
 - What's the difference between `params` and `session`?
 
-## Break (10 / 100)
+### Shortcomings
+
+- How are you told if you entered the wrong password?
+- What can you do when you're signed in that you can't when you're not signed in?
+
+## Differentiation
+
+### [You Do: Differentiate between signed-in and signed-out](adding-differentiation.md)
+
+## Break
 
 ## Flash
 
@@ -96,9 +100,9 @@ We need to figure out a way for Rails remember I'm signed in.
 
 Rails gives us a handy method for showing error messages to users, called `flash`. It relies on sessions.
 
-### [You Do: Adding Flash](adding-flash.md) (10 / 110)
+### [You Do: Adding Flash](adding-flash.md)
 
-### Reflect (5 / 115)
+### Reflect
 
 - Across how many browser requests or controller actions is a flash message available?
 - What are the two conventional types of flash messages, and what's the difference between them?
@@ -108,9 +112,9 @@ Rails gives us a handy method for showing error messages to users, called `flash
 
 This next "You Do" is **individual**: it doesn't involve writing any code, so do it on your own computer.
 
-### [You Do: Exploring Cookies](exploring-cookies.md) (10 / 125)
+### [You Do: Exploring Cookies](exploring-cookies.md)
 
-### Reflect (5 / 130)
+### Reflect
 
 - What's the difference between a cookie and a session?
 - How do sessions use cookies?
@@ -119,7 +123,7 @@ This next "You Do" is **individual**: it doesn't involve writing any code, so do
 
 Please go back to pair-programming:
 
-### [You Do: Adding Cookies](adding-cookies.md) (10 / 140)
+### [You Do: Adding Cookies](adding-cookies.md)
 
 ## Important Note About Security
 
@@ -134,7 +138,7 @@ That said, security is *complicated*, and you shouldn't let it prevent you from 
 - Prevent someone from signing up with a username that's already in use
 - What else?
 
-These things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/commit/43ccf55d3a7b7b7f1139eab791201e737348c38d)
+These things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/6)
 
 ## References
 
@@ -145,4 +149,3 @@ These things have been addressed [in the solution branch.](https://github.com/ga
     - [Part 3](https://youtu.be/YYEtEsFE9Mw)
     - [Part 4](https://youtu.be/N67YBiLkrSE)
     - [Part 5](https://youtu.be/3h34Guspvp8)
-
