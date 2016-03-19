@@ -50,7 +50,23 @@ Github includes jQuery on all its webpages. To hide the comments, just open the 
 $(".inline-comments").hide()
 ```
 
+### After each "You Do"
+
+Please checkout the solution branch for that particular You Do (except for the Adding Differentiation section, which has the same branch as Adding Sessions).
+
+For example, after "You Do: Adding Users"
+
+```
+$ git checkout 1-added-users
+```
+
+This way we'll all stay on the same page, and will have fewer set-up errors caused by one person's code looking different from another person's code.
+
+**If you get an error**, simply `add` and `commit`, then try checking out again.
+
 ## Adding Users
+
+To begin, check out the `0-add-users-starter` branch. It contains starter code for this You Do.
 
 As you go, keep in mind the "Reflect" questions below which we'll address as a class.
 
