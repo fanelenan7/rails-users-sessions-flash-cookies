@@ -62,8 +62,6 @@ As you go, keep in mind the "Reflect" questions below which we'll address as a c
 - How could this be DRY-ed up? (Hint: There are 3 views that are almost identical.)
 - How are users' passwords protected?
 
-## Break
-
 ## Sessions
 
 We need to figure out a way for Rails remember I'm signed in.
@@ -88,11 +86,14 @@ We need to figure out a way for Rails remember I'm signed in.
 - How are you told if you entered the wrong password?
 - What can you do when you're signed in that you can't when you're not signed in?
 
-## Differentiation
+## Permissions
 
-### [You Do: Differentiate between signed-in and signed-out](adding-differentiation.md)
+### [You Do: Add permissions](adding-permissions.md)
 
-## Break
+### Reflect
+
+- How are permissions related to sessions?
+- What's the difference between adding permissions on the front-end and the back-end?
 
 ## Flash
 
