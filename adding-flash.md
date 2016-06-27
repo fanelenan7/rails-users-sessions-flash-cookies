@@ -1,6 +1,6 @@
 # Adding Flash
 
-Flash a hash that is generated in one controller action, and is accessible only in the *next* controller action. It is used only to contain messages to the user, not any other sort of data.
+Flash is a hash that is generated in one controller action, and is accessible only in the *next* controller action. It is used only to contain messages to the user, not any other sort of data.
 
 By convention, there are two types of flash messages: alerts and notices. Alerts are used for warnings and errors; notices are used for everything else.
 
