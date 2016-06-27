@@ -8,19 +8,13 @@
 
 ## [Setup & Logistics](setup.md)
 
-## Adding Users
+So far, we have a 3 model CRUD app, with:
 
-To begin, check out the `0-add-users-starter` branch. It contains starter code for this You Do.
+- Artists
+- Songs
+- Users
 
-As you go, keep in mind the "Reflect" questions below which we'll address as a class.
-
-### [You Do: Adding Users](adding-users.md)
-
-### Reflect
-
-- How does `f.password_field` protect you from malware and hackers?
-- How could this be DRY-ed up? (Hint: There are 3 views that are almost identical.)
-- How are users' passwords protected?
+You can sign up for an account by visiting <http://localhost:3000/users/new>
 
 ## Sessions
 

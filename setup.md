@@ -4,6 +4,14 @@ Currently, Tunr just supports one single "God" user. It would be nice if it coul
 
 ### [Please clone down this repo.](https://github.com/ga-wdi-exercises/tunr_rails_users)
 
+```
+$ cd tunr_rails_users
+$ git checkout 1-added-users
+$ bundle install
+$ rake db:create db:migrate db:seed
+$ rails s
+```
+
 This class is going to be mostly you walking through README files with a partner, adding functionality to Tunr.
 
 In any step that asks you to add code, there will be a link to a "diff" page on Github that shows you that particular piece of code being added.
@@ -46,8 +54,6 @@ $(".inline-comments").hide()
 ### After each "You Do"
 
 Please checkout the solution branch for that particular You Do (except for the Adding Differentiation section, which has the same branch as Adding Sessions).
-
-For example, after "You Do: Adding Users"
 
 ```
 $ git checkout 1-added-users
