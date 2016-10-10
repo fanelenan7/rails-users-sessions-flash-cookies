@@ -1,20 +1,17 @@
-# Sessions, Cookies, Errors, and Flash
+# Sessions, Cookies, Errors and Flash
 
 ## Learning Objectives
 
-- Contrast the use cases for cookies, sessions, and permanent storage.
-- Define and then access a session variable in a Rails application.
-- Add sign-in, sign-up, and sign-out functionality to a Rails application.
+- Contrast the use cases for cookies, sessions, and permanent storage
+- Define and then access a session variable in a Rails application
+- Add sign-in, sign-up and sign-out functionality to a Rails application
 
 ## [Setup & Logistics](setup.md)
 
-So far, we have a 3 model CRUD app, with:
-
+Today we'll begin with a three-model version on Tunr. Those models are...
 - Artists
 - Songs
 - Users
-
-You can sign up for an account by visiting <http://localhost:3000/users/new>
 
 ## Sessions
 
