@@ -205,7 +205,3 @@ To do this we will leverage our new `@current_user` variable, which can be acces
 > Because `@current_user` is declared in the `before_action` in the `ApplicationController`, we can access it in literally every view.
 
 This means we can change the way things look depending on whether the user is signed in. For instance: we only want to show the "Sign Up" and "Sign In" links to users who are not already signed in.
-
----------
-
-When all is said and done, [your code should look something like this](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files). We'll keep adding to it in the next section.

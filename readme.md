@@ -21,7 +21,9 @@ We need to figure out a way for Rails remember I'm signed in.
 
 - How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
 
-### [You Do: Adding Sessions](adding-sessions.md)
+### [You Do: Adding Sessions](adding-sessions.md) (40 minutes)
+
+> 30 minutes exercise. 10 minutes review.
 
 ### Reflect
 
@@ -32,14 +34,16 @@ We need to figure out a way for Rails remember I'm signed in.
 - What's is a `before_action`?
 - What's the difference between `params` and `session`?
 
-### Shortcomings
+  ### Shortcomings
 
 - How are you told if you entered the wrong password?
 - What can you do when you're signed in that you can't when you're not signed in?
 
+## Break (10 minutes)
+
 ## Permissions
 
-### [You Do: Add permissions](adding-permissions.md)
+### [You Do: Add Permissions](adding-permissions.md)
 
 ### Reflect
 
@@ -59,6 +63,10 @@ Rails gives us a handy method for showing error messages to users, called `flash
 - Across how many browser requests or controller actions is a flash message available?
 - What are the two conventional types of flash messages, and what's the difference between them?
 - True or false: Flash should be used to store information from the database.
+
+--------
+
+# Bonuses
 
 ## Cookies
 
@@ -83,7 +91,9 @@ This version of Tunr breaks the fundamental rule of web security: Don't store pa
 
 That said, security is *complicated*, and you shouldn't let it prevent you from making an app (hence why we're not worrying about it here).
 
-## Easy wins we didn't cover
+--------
+
+## Easy Wins We Didn't Cover
 
 - For each Artist and Song, show the username of the person who submitted it
 - On each User page, show all the Artists and Songs they've submitted
