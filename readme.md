@@ -19,7 +19,9 @@ We need to figure out a way for Rails remember I'm signed in.
 
 #### Why not create an "is_signed_in" column in my User table?
 
-- How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
+- How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer? Enter: Sessions.
+
+### [I Do: Intro to Sessions](sessions-intro.md) (30 minutes)
 
 ### [You Do: Adding Sessions](adding-sessions.md) (40 minutes)
 
@@ -41,7 +43,9 @@ We need to figure out a way for Rails remember I'm signed in.
 
 ## Break (10 minutes)
 
-## Permissions
+## Permissions (30 minutes)
+
+> 20 minutes exercise. 10 minutes review.
 
 ### [You Do: Add Permissions](adding-permissions.md)
 
@@ -50,7 +54,11 @@ We need to figure out a way for Rails remember I'm signed in.
 - How are permissions related to sessions?
 - What's the difference between adding permissions on the front-end and the back-end?
 
-## Flash
+## Break (10 minutes)
+
+## Flash (30 minutes)
+
+> 20 minutes exercise. 10 minutes review.
 
 `puts`ing out error messages isn't very helpful, since the user is never going to be able to see them.
 
