@@ -1,30 +1,39 @@
-# Sessions, Cookies, Errors, and Flash
+# Sessions, Errors and Flash
 
 ## Learning Objectives
 
-- Contrast the use cases for cookies, sessions, and permanent storage.
-- Define and then access a session variable in a Rails application.
-- Add sign-in, sign-up, and sign-out functionality to a Rails application.
+- Contrast the use cases for sessions and permanent storage
+- Define and then access a session variable in a Rails application
+- Add sign-in, sign-up and sign-out functionality to a Rails application
 
-## [Setup & Logistics](setup.md)
+Today we'll be adding a pretty huge feature to Tunr: user authentication. By that we mean the ability for a user to sign up, sign in and sign out of an application. This a big move for us since, up until this point, all of our applications have had one single user.
 
-So far, we have a 3 model CRUD app, with:
+In implementing this feature, we will be learning about an important feature in Rails: Sessions. Sessions are not unique to Rails but are an important concept to understand as we dive further into user authentication in future classes.
 
-- Artists
-- Songs
-- Users
+## [I Do: Intro to Sessions](sessions-intro.md) (20 minutes)
 
-You can sign up for an account by visiting <http://localhost:3000/users/new>
+Sessions are not specific to user authentication. They can be used for a number of things. [Let's talk about them at a higher level](sessions-intro.md).
 
-## Sessions
+## [Setup & Logistics](setup.md) (10 minutes)
 
-We need to figure out a way for Rails remember I'm signed in.
+The rest of this lesson will be primarily exercise-based. Before you dive into them, [let's spend some time making sure we're all set up properly](setup.md).
 
-#### Why not create an "is_signed_in" column in my User table?
+## [You Do: Adding Sessions](adding-sessions.md) (40 minutes)
 
-- How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
+> 30 minutes exercise. 10 minutes review.
 
-### [You Do: Adding Sessions](adding-sessions.md)
+<details>
+  <summary><strong>Why can't we just add an `is_signed_in` column to our `users` table?</strong></summary>
+
+  > How would Rails know how to sign out? More importantly, if multiple users are accessing the app, how would Rails know which signed in user is on which computer?
+
+</details>
+
+Our goals for this exercise...
+  1. Allow a user to sign into Tunr
+  2. Allow a user to sign out of Tunr
+
+[Click here to get started.](adding-sessions.md)
 
 ### Reflect
 
@@ -40,28 +49,55 @@ We need to figure out a way for Rails remember I'm signed in.
 - How are you told if you entered the wrong password?
 - What can you do when you're signed in that you can't when you're not signed in?
 
-## Permissions
+## Break (10 minutes)
 
-### [You Do: Add permissions](adding-permissions.md)
+## [You Do: Add Permissions](adding-permissions.md) (30 minutes)
+
+> 20 minutes exercise. 10 minutes review.
+
+Users can now sign in and out of Tunr. Now let's make it so that only certain things can be done by signed in users. For example...
+- Only signed-in users should be able to sign out of Tunr.
+- A user should be the only one able to change his/her username or password.
+
+[Your next exercise is to add these and other permissions to Tunr.](adding-permissions.md)
 
 ### Reflect
 
 - How are permissions related to sessions?
 - What's the difference between adding permissions on the front-end and the back-end?
 
-## Flash
+## Break (10 minutes)
 
-`puts`ing out error messages isn't very helpful, since the user is never going to be able to see them.
+## [You Do: Adding Flash](adding-flash.md) (30 minutes)
 
-Rails gives us a handy method for showing error messages to users, called `flash`. It relies on sessions.
+> 20 minutes exercise. 10 minutes review.
 
-### [You Do: Adding Flash](adding-flash.md)
+It isn't helpful to the end-user if errors are only `puts`ed to the Terminal. They need error messages they can see in the browser!
+
+Rails helps us with a feature called "Flash", a method for showing error messages to users that relies on sessions.
+
+[For your next exercise, you will learn how to implement Flash.](adding-flash.md)
 
 ### Reflect
 
 - Across how many browser requests or controller actions is a flash message available?
 - What are the two conventional types of flash messages, and what's the difference between them?
 - True or false: Flash should be used to store information from the database.
+
+--------
+
+## Features To Implement If You Finish Early
+
+- For each Artist and Song, show the username of the person who submitted it
+- On each User page, show all the Artists and Songs they've submitted
+- Prevent someone from signing up with a username that's already in use
+- Prevent someone from editing Songs and Artists they did not create
+
+Some of these things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/6)
+
+--------
+
+# Bonuses
 
 ## Cookies
 
@@ -86,14 +122,7 @@ This version of Tunr breaks the fundamental rule of web security: Don't store pa
 
 That said, security is *complicated*, and you shouldn't let it prevent you from making an app (hence why we're not worrying about it here).
 
-## Easy wins we didn't cover
-
-- For each Artist and Song, show the username of the person who submitted it
-- On each User page, show all the Artists and Songs they've submitted
-- Prevent someone from signing up with a username that's already in use
-- What else?
-
-These things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/6)
+--------
 
 ## References
 
