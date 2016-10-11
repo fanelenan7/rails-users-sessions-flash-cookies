@@ -84,7 +84,7 @@ If `@current_user` is nil that means `session[:user_id]` is also nil, which mean
 
 **Now add that to the other controller actions that need it.**
 
-## Disable User Edit Routes for Users Who Aren't the Current User
+## 4. Disable User Edit Routes for Users Who Aren't the Current User
 
 <details>
   <summary><strong>How could you use the same technique as in the previous step to accomplish this feature?</strong></summary>
