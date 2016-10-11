@@ -36,7 +36,7 @@ This could also be written as...
 
 **Look through the rest of the application and use this same technique to hide all links that allow a user to create, update or delete Artists and Songs.**
 
-## [2. Hide User Edit Links For Users Who Aren't The Current User](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-c7c9a522f39f5d8cd9b512cd928b2d14R1)
+## 2. Hide User Edit Links For Users Who Aren't The Current User
 
 A User should be able to edit only their own profile.
 
@@ -44,12 +44,16 @@ A User should be able to edit only their own profile.
   <summary><strong>How could you use the same technique as in the previous step to accomplish this?</strong></summary>
 
   ```html
+  <!-- app/views/users/show.html.erb -->
+
   <h2><%= @user.username %> <%= link_to("(edit)", edit_user_path(@user)) if @current_user == @user %></h2>
   ```
 
   or...
 
   ```html
+  <!-- app/views/users/show.html.erb -->
+
   <h2>
     <% if @current_user == @user %>
       <%= @user.username %> <%= link_to("(edit)", edit_user_path(@user))%>
@@ -65,7 +69,7 @@ Hiding these links is a good start. But if someone just types `/artists/new` int
 
 To prevent this, whenever a user tries to access one of these sensitive routes we can check whether they're signed in, and redirect them away if they aren't.
 
-We'll add one line to the beginning of the relevant controller actions
+We'll add one line to the beginning of the controller actions in question...
 
 ```rb
 # app/controllers/artists_controller.rb
@@ -78,9 +82,9 @@ end
 
 If `@current_user` is nil that means `session[:user_id]` is also nil, which means the user isn't signed in. The controller action will stop before any data is modified, and the user will be redirected to the "root" URL.
 
-**Now add that to the rest of the relevant controller actions.**
+**Now add that to the other controller actions that need it.**
 
-## 4. [Disable User Edit Routes for Users Who Aren't the Current User](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-4e05ad0d64e6100656b63ad1e78f32c5R23)
+## Disable User Edit Routes for Users Who Aren't the Current User
 
 <details>
   <summary><strong>How could you use the same technique as in the previous step to accomplish this feature?</strong></summary>
@@ -101,7 +105,7 @@ If `@current_user` is nil that means `session[:user_id]` is also nil, which mean
 Currently, signing up and signing in are different processes. After you sign up, you then have to sign in. This isn't really a permissions issue -- just a little annoyance.
 
 <details>
-  <summary><strong>Fix this by setting `session[:user_id]` whenever a new User is created.</strong></summary>
+  <summary><strong>Fix this by setting `session[:user_id]` to the new user's id whenever a new user is created (i.e., signed up).</strong></summary>
 
   ```rb
   def create
