@@ -14,7 +14,7 @@ A session is just a place to store data during one request that you can read dur
 
 ## I Do: Session Demo
 
-For this next part of the class, we will go through a demo showing how sessions work. You don't need to follow along -- just grasp the concept
+For this next part of the class, we will go through a demo showing how sessions work. You don't need to follow along -- just grasp the concept.
 
 Should you want to play with this code later, the starting point is the [edit/feature branch of Reminder.ly](https://github.com/ga-wdi-exercises/reminderly/tree/edit-feature), a one-model to-do app.
 
@@ -53,7 +53,7 @@ end
 ```html
 <!-- app/views/sessions/index.html.erb -->
 
-<h1>testing sessions</h1>
+<h1>Testing sessions</h1>
 <% if @name %>
 <h2><%= @name %></h2>
 <% end %>
