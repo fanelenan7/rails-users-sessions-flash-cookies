@@ -23,7 +23,7 @@ Because it doesn't add anything to the database, we don't necessarily need a mod
 We will allow users to sign in by creating a form that corresponds to the `new` action in a Sessions controller. Let's begin by creating that controller and then the `new` action...
 
 ```bash
-$ rails g controller session
+$ rails g controller sessions
 ```
 
 ```ruby
