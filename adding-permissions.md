@@ -83,7 +83,7 @@ If `@current_user` is nil that means `session[:user_id]` is also nil, which mean
 ## 4. [Disable User Edit Routes for Users Who Aren't the Current User](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-4e05ad0d64e6100656b63ad1e78f32c5R23)
 
 <details>
-  <summary><strong>How could you use the same technique as in the previous step to accomplish this?</strong></summary>
+  <summary><strong>How could you use the same technique as in the previous step to accomplish this feature?</strong></summary>
 
   ```rb
   # app/controllers/users_controller.rb
@@ -96,8 +96,19 @@ If `@current_user` is nil that means `session[:user_id]` is also nil, which mean
 
 </details>
 
-## [5. When a user "signs up", they should also be "signed in"](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-4e05ad0d64e6100656b63ad1e78f32c5R13)
+## [5. When A User "Signs Up", They Should Also Be "Signed In"](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-4e05ad0d64e6100656b63ad1e78f32c5R13)
 
 Currently, signing up and signing in are different processes. After you sign up, you then have to sign in. This isn't really a permissions issue -- just a little annoyance.
 
-Fix this by setting `session[:user_id]` whenever a new User is created.
+<details>
+  <summary><strong>Fix this by setting `session[:user_id]` whenever a new User is created.</strong></summary>
+
+  ```rb
+  def create
+    @user = User.create(user_params)
+    session[:user_id] = @user.id
+    redirect_to users_path(@user)
+  end
+  ```
+
+</details>
