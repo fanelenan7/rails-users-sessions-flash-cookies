@@ -10,7 +10,7 @@ Most applications need to keep track of the state of a particular user. Is a use
 
 HTTP is by nature, however, stateless. Without state, a user would have to identify themselves after every request. Our shopping carts in Amazon couldn't keep their contents.
 
-A session is just a place to store data during one request that you can read during later requests. Just like params, the session in ruby is a hash. This hash allows us to keep track of this information. Rails will create a new session automatically when a new user accesses the application. It will load an existing session if the user has already used the application.
+A session is just a place to store data during one request that you can read during later requests. Just like params, the session in ruby is a hash. This hash allows us to keep track of this information. Today in Rails we will create a new session automatically when a new user signs into an application.
 
 ## I Do: Session Demo
 
