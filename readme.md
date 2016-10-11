@@ -91,8 +91,9 @@ Rails helps us with a feature called "Flash", a method for showing error message
 - For each Artist and Song, show the username of the person who submitted it
 - On each User page, show all the Artists and Songs they've submitted
 - Prevent someone from signing up with a username that's already in use
+- Prevent someone from editing Songs and Artists they did not create
 
-These things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/6)
+Some of these things have been addressed [in the solution branch.](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/6)
 
 --------
 

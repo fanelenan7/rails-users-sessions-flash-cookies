@@ -44,9 +44,31 @@ Now let's reference sessions in `routes.rb`. We're going to do this a little dif
 resource :session   # Add this after the resources already in the file.
 ```
 
-This is one of relatively few cases in which we'll use `resource` (singular). The difference between `resource` and `resources` is that the routes have singular names. That means there's no `index` route, and there are no IDs in the `show`, `edit` and `delete` routes.
+This is one of relatively few cases in which we'll use `resource` (singular). The difference between `resource` and `resources` is that the routes have singular names. That means there's no `index` route.
 
-The implication is that a Resource is something that will not be saved to the database, and therefore does not need IDs.
+```bash
+resources :sessions
+=> rake routes
+
+     sessions GET        /sessions(.:format)            sessions#index
+              POST       /sessions(.:format)            sessions#create
+  new_session GET        /sessions/new(.:format)        sessions#new
+ edit_session GET        /sessions/:id/edit(.:format)   sessions#edit
+      session GET        /sessions/:id(.:format)        sessions#show
+              PUT        /sessions/:id(.:format)        sessions#update
+              DELETE     /sessions/:id(.:format)        sessions#destroy
+
+resource :session
+=> rake routes
+      session POST       /session(.:format)            sessions#create
+  new_session GET        /session/new(.:format)        sessions#new
+ edit_session GET        /session/:id/edit(.:format)   sessions#edit
+              GET        /session/:id(.:format)        sessions#show
+              PUT        /session/:id(.:format)        sessions#update
+              DELETE     /session/:id(.:format)        sessions#destroy
+```
+
+While a Session can have id's, we are not making use of them. The implication here is that a Session is something that will not be saved to the database, and therefore does not need an id.
 
 ## 3. Create A Sign-In View
 
@@ -169,9 +191,9 @@ We'll start doing that by creating a `before_action` in the `controllers/applica
 ```rb
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception   # This line should already be in your code.
-  before_action :get_current_user   # Here we're saying "run the method get_current_user before every controller action"
+  before_action :set_current_user   # Here we're saying "run the method set_current_user before every controller action"
 
-  def get_current_user
+  def set_current_user
     if User.exists?(session[:user_id])    # If there is a user_id currently stored in the session hash...
       @current_user = User.find(session[:user_id])  # ...find and save that user in @current_user
     else
