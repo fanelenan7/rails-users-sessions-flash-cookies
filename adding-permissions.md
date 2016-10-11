@@ -100,7 +100,7 @@ If `@current_user` is nil that means `session[:user_id]` is also nil, which mean
 
 </details>
 
-## [5. When A User "Signs Up", They Should Also Be "Signed In"](https://github.com/ga-wdi-exercises/tunr_rails_users/pull/3/files#diff-4e05ad0d64e6100656b63ad1e78f32c5R13)
+## 5. When A User "Signs Up", They Should Also Be "Signed In"
 
 Currently, signing up and signing in are different processes. After you sign up, you then have to sign in. This isn't really a permissions issue -- just a little annoyance.
 
