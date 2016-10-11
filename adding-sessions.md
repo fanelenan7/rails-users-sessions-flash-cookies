@@ -112,7 +112,7 @@ def create
     @user = User.find_by(username: input_username)  # Find that user
 
     # If the password submitted through the form is correct...
-    if @user.password === params[:user][:password]
+    if @user.password == params[:user][:password]
       puts "You're signed in!"
       session[:user_id] = @user.id  # Set the session user_id to that of the user trying to log in
       redirect_to root_path   # Send them back to the app
