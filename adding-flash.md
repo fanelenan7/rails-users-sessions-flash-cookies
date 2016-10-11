@@ -1,5 +1,7 @@
 # Adding Flash
 
+> If you need some starter code for this section, checkout the `2-added-sessions` branch of [`tunr_rails_users`](https://github.com/ga-wdi-exercises/tunr_rails_users/tree/2-added-sessions).
+
 Flash is a hash that is generated in one controller action, and is accessible only in the *next* controller action. It is used only to contain messages to the user, not any other sort of data.
 
 Think of flash as a session that only lasts for one request.

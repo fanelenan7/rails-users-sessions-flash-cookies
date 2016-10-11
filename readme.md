@@ -10,7 +10,7 @@ Today we'll be adding a pretty huge feature to Tunr: user authentication. By tha
 
 In implementing this feature, we will be learning about an important feature in Rails: Sessions. Sessions are not unique to Rails but are an important concept to understand as we dive further into user authentication in future classes.
 
-## [I Do: Intro to Sessions](sessions-intro.md) (30 minutes)
+## [I Do: Intro to Sessions](sessions-intro.md) (20 minutes)
 
 Sessions are not specific to user authentication. They can be used for a number of things. [Let's talk about them at a higher level](sessions-intro.md).
 

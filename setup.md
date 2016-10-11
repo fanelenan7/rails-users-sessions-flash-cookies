@@ -29,12 +29,6 @@ This means...
 
 This is a great way to practice "pair programming" and "rubber ducking."
 
-### After Each "You Do"
-
-After each exercise, please checkout the solution branch for that particular You Do. There will be a note to do this at the end of each section.
-
-This way we'll all stay on the same page, and will have fewer set-up errors caused by one person's code looking different from another person's code.
-
 ### Do Not Copy And Paste
 
-You will benefit greatly from typing everything out, even when you are provided with the answer. 
+You will benefit greatly from typing everything out, even when you are provided with the answer.

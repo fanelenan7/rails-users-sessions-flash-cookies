@@ -1,5 +1,7 @@
 # Adding Cookies
 
+> If you need some starter code for this section, checkout the `3-added-flash` branch of [`tunr_rails_users`](https://github.com/ga-wdi-exercises/tunr_rails_users/tree/3-added-flash).
+
 ## Framing
 
 One thing we see all the time that uses cookies is the "Remember me?" function you see when logging in to various sites. This saves your username to a cookie, so that it's already filled in when you go back to the site. Nothing fancy; just a nice little user interface convenience.

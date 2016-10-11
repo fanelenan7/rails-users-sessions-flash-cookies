@@ -96,9 +96,10 @@ If we navigate to another page that leverages that session value(`http://localho
 
 This is a contrived use case of sessions but we can clearly see that the state of `session[:name] = "bob"` persisting from request to request. Normally session values will be set in `POST` requests, because we're "creating" data.
 
-## Sessions in the wild
-Sessions are used mostly for just a handful things but certainly not limited to these things:
+## Sessions in the Wild
 
-- User authentication/authorization
+Sessions are used mostly for -- but are not limited to -- the following...
+
+- User authentication and authorization
 - Shopping carts
 - Setting a current model to persist throughout requests
