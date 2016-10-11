@@ -27,6 +27,8 @@ $ rails g controller session
 ```
 
 ```ruby
+# app/controllers/sessions_controller.rb
+
 class SessionsController < ApplicationController
   def new
     @user = User.new
@@ -65,7 +67,7 @@ This form will go in the view that corresponds with `Session#new` (i.e., out Ses
 <% end %>
 ```
 
-This is almost identical to the Sign Up form. However, because there's no Session model, we can't just say `form_for @user`. If we do, it'll try to POST the data to the `User#create` route, which we don't want.
+This is almost identical to the Sign Up form. Because there is no Session model, however, we can't just say `form_for @user`. If we do, it'll try to POST the data to the `User#create` route, which we don't want.
 
 We have to explicitly direct the form where we want it to go. In this case, we want it to send information to the `Session#create` action, which we'll define next. This is where `url: session_path` and `method: :post` come in, as demonstrated in the above snippet.
 
@@ -77,7 +79,7 @@ Let's create a controller action that corresponds with singing in. Here's the fl
   3. Check to see if that user's password matches the one submitted through the form
   4. If they match, set the Session's `user_id` to that of the logged-in user (i.e., indicate that this user is currently logged in)
 
-If the username and/or password submitted through the form is incorrect at any point in this process
+If the username and/or password submitted through the form is incorrect at any point in this process, the user is re-directed to the application's root page.
 
 ```rb
 def create
@@ -105,7 +107,13 @@ def create
 end
 ```
 
-**Why can we just say `session[:user_id]` in here?** That's because `session` is a special hash that exists in *every controller action*. It's different from `params`, but you access it the same way.
+<details>
+
+  <summary><strong>Why does `session[:user_id]` work in here?</strong></summary>
+
+  > That's because `session` is a special hash that exists in *every controller action*. It's different from `params`, but you access it the same way.
+
+</details>
 
 In every subsequent controller action, you can now access `session[:user_id]`.
 
@@ -113,7 +121,7 @@ You can put as many key-value pairs as you would like into the `session` hash.
 
 > We *could* have created `sign_in` actions on the Users controller. But it's convention to treat Sessions and Users as separate things. This also lets us use the standard RESTful routes: `new`, `create` and so on.
 
-Note that we can't just write `params[:username]`. We must write `params[:user][:username]`. The data that gets POSTed looks like this, with the form input in a nested hash:
+Note that we can't just write `params[:username]`. We must write `params[:user][:username]`. The data that gets POSTed looks like this, with the form input in a nested hash...
 
 ```rb
 {
@@ -176,11 +184,9 @@ end
 - **`before_action`**: A method (or collection of methods) that runs before every single controller action. You can declare `before_action` in any controller.
 - **`ApplicationController`**: The class from which every single controller inherits (i.e. `class SessionController < ApplicationController`). That means if you do something in `ApplicationController`, it also applies to every other controller.
 
-This `before_action` will check if a User exists in the Postgres database with an ID that matches `session[:user_id]`. (If we haven't set `session[:user_id]` yet it will be `nil`, and so won't match any Users anyway.)
+This `before_action` will check if a User exists in the database with an id that matches `session[:user_id]`. If we haven't set `session[:user_id]` yet it will be `nil` and so won't match any Users anyway.
 
-If a matching User does exist, ActiveRecord will put that user into an instance variable called `@current_user`.
-
-This `@instance_variable` behaves like any other instance variable in a controller: you can access it in your views.
+If a matching User does exist, ActiveRecord will put that user into an instance variable called `@current_user`. This instance variable behaves like any other instance variable in a controller: you can access it in your views.
 
 ## 7. Finish Updating Navigation
 

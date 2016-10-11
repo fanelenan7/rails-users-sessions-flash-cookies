@@ -1,4 +1,4 @@
-# Sessions, Cookies, Errors and Flash
+# Sessions, Errors and Flash
 
 ## Learning Objectives
 
@@ -14,7 +14,7 @@ In implementing this feature, we will be learning about an important feature in 
 
 Sessions are not specific to user authentication. They can be used for a number of things. [Let's talk about them at a higher level](sessions-intro.md).
 
-## [Setup & Logistics](setup.md) (15 minutes)
+## [Setup & Logistics](setup.md) (10 minutes)
 
 The rest of this lesson will be primarily exercise-based. Before you dive into them, [let's spend some time making sure we're all set up properly](setup.md).
 
