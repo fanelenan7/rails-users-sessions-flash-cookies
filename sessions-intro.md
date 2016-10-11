@@ -6,13 +6,11 @@ Many of us have been to several webpages that only allow us to access content if
 
 ## What's In A Session?
 
-Most applications need to keep track of the state of a particular user. HTTP is by nature, stateless. Without state, a user would have to identify themselves after every request. Our shopping carts in Amazon couldn't keep their contents. Rails will create a new session automatically if a new user accesses the application. It will load an existing session if the user has already used the application. A session is just a place to store data during one request that you can read during later requests. Just like params, the session in ruby is a hash.
+Most applications need to keep track of the state of a particular user. Is a user logged-in? Is there information that is unique to this user's instance of being signed in?
 
-## Where Is My Data Being Stored?
+HTTP is by nature, however, stateless. Without state, a user would have to identify themselves after every request. Our shopping carts in Amazon couldn't keep their contents.
 
-TLDR version is a cookie. When you request a webpage, the server can set a cookie when it responds back. Your browser will store those cookies. And until the cookie expires, every time you make a request, your browser will send the cookies back to the server. By default in Rails, the session data is stored in the cookie itself using a thing called a cookie store. It's limited in size as a cookie can only maintain 4kb of data. This is fine for our purposes since we should only be storing id's in it.
-
-> Look into cache or database stores if you need a larger pool for session data.
+A session is just a place to store data during one request that you can read during later requests. Just like params, the session in ruby is a hash. This hash allows us to keep track of this information. Rails will create a new session automatically when a new user accesses the application. It will load an existing session if the user has already used the application.
 
 ## I Do: Session Demo
 
