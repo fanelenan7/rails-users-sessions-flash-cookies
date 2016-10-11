@@ -6,7 +6,7 @@
 - Define and then access a session variable in a Rails application
 - Add sign-in, sign-up and sign-out functionality to a Rails application
 
-Today we'll be adding a pretty huge feature to Tunr: user authentication. By that we mean the ability for a user to sign up, sign in and sign out of an application.
+Today we'll be adding a pretty huge feature to Tunr: user authentication. By that we mean the ability for a user to sign up, sign in and sign out of an application. This a big move for us since, up until this point, all of our applications have had one single user.
 
 In implementing this feature, we will be learning about an important feature in Rails: Sessions. Sessions are not unique to Rails but are an important concept to understand as we dive further into user authentication in future classes.
 
