@@ -1,4 +1,4 @@
-# Sessions, Errors and Flash
+# Sessions, Permissions and Flash
 
 ## Learning Objectives
 
