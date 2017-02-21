@@ -2,7 +2,7 @@
 
 "Permissions" are what a given user is "permitted" to do.
 
-Often permissions are very nuanced: an app can have several "roles", like "admin," "member" and "super-admin," all of which are permitted to do different things.
+Often permissions are very nuanced: an app can have several "roles", like "admin," "member" and "super-admin" — all of which are permitted to do different things.
 
 We're going to keep Tunr more general, and add two "sets" of permissions...
 - Only signed-in users can CRUD Artists and Songs

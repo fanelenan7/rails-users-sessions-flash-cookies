@@ -8,7 +8,7 @@ Many of us have been to several webpages that only allow us to access content if
 
 Most applications need to keep track of the state of a particular user. Is a user logged-in? Is there information that is unique to this user's instance of being signed in?
 
-HTTP is by nature, however, stateless. Without state, a user would have to identify themselves after every request. Our shopping carts in Amazon couldn't keep their contents.
+HTTP is by nature, however, stateless. That is, the program is not keeping record of previous interactions. Without state, a user would have to identify themselves after every request. Our shopping carts in Amazon couldn't keep their contents.
 
 A session is just a place to store data during one request that you can read during later requests. Just like params, the session in ruby is a hash. This hash allows us to keep track of this information. Today in Rails we will create a new session automatically when a new user signs into an application.
 
@@ -21,7 +21,8 @@ Should you want to play with this code later, the starting point is the [edit/fe
 Let's add a controller and some views that we'll need to demonstrate sessions...
 
 ```bash
-$ touch app/controllers/sessions_controller.rb
+$ cd app
+$ touch controllers/sessions_controller.rb
 $ mkdir views/sessions
 $ touch views/sessions/index.html.erb
 $ touch views/sessions/another_page.html.erb
@@ -44,7 +45,7 @@ class SessionsController < ApplicationController
     session[:name] = "bob"
   end
 
-  def another
+  def another_page
     @name = session[:name]
   end
 end
@@ -60,7 +61,7 @@ end
 ```
 
 ```html
-<!-- app/views/sessions/another.html.erb -->
+<!-- app/views/sessions/another_page.html.erb -->
 
 <h1>Another pages to test sessions</h1>
 <% if @name %>
@@ -82,7 +83,7 @@ Finally we need to update our `config/routes.rb` so that we can actually access 
 Rails.application.routes.draw do
   get 'show_session' => 'sessions#index'
   get 'set_session' => 'sessions#set_session'
-  get 'another' => 'sessions#another'
+  get 'another_page' => 'sessions#another_page'
 
   resources :todos
 end

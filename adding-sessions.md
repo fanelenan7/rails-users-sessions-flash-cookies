@@ -4,13 +4,13 @@
 
 **Sessions** are a component of virtually every web framework. They're *crucial* to any website that lets you log on and log off.
 
-In your everyday life at some point you've probably gotten an error page that said something like, "Session expired: log in again".
+In your everyday life, you've probably gotten an error page that said something like, "Session expired: log in again".
 
 **In a nutshell**, a session is two things:
 - An instance of you using a website, usually -- but not always -- with you having signed in somewhere.
 - A way for your Rails app to temporarily store some data about you "in memory" -- that is, not in Postgres -- and to associate the data with your particular computer. These data are called "session variables".
 
-Sessions work using cookies. We'll talk about that later.
+Sessions work using cookies. See the bonus content in this lesson plan for more on that.
 
 We can use them to make Rails "remember" you're logged in to Tunr.
 
@@ -68,7 +68,7 @@ resource :session
               DELETE     /session/:id(.:format)        sessions#destroy
 ```
 
-While a Session can have id's, we are not making use of them. The implication here is that a Session is something that will not be saved to the database, and therefore does not need an id.
+While a Session can have ids, we are not making use of them. The implication here is that a Session is something that will not be saved to the database, and therefore does not need an id.
 
 ## 3. Create A Sign-In View
 
