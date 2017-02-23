@@ -6,6 +6,7 @@ class SongsController < ApplicationController
 
   # new
   def new
+    redirect_to root_path unless @current_user
     @artist = Artist.find(params[:artist_id])
     @song = @artist.songs.new
   end
@@ -25,6 +26,7 @@ class SongsController < ApplicationController
 
   # edit
   def edit
+    redirect_to root_path unless @current_user
     @song = Song.find(params[:id])
   end
 

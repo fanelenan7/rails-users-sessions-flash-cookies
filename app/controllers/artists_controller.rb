@@ -6,6 +6,7 @@ class ArtistsController < ApplicationController
 
   # new
   def new
+    redirect_to root_path unless @current_user
     @artist = Artist.new
   end
 
@@ -23,6 +24,7 @@ class ArtistsController < ApplicationController
 
   # edit
   def edit
+    redirect_to root_path unless @current_user
     @artist = Artist.find(params[:id])
   end
 
